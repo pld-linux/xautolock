@@ -2,7 +2,7 @@ Summary:	Utility to fire up programs in case of user inactivity under X
 Summary(pl):	Narzêdzie do uruchamiania programów w przypadku nieaktywno¶ci u¿ytkownika pod X
 Name:		xautolock
 Version:	2.1
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	ftp://ftp.ibiblio.org/pub/Linux/X11/screensavers/%{name}-%{version}.tgz
