@@ -6,6 +6,7 @@ Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	ftp://ftp.ibiblio.org/pub/Linux/X11/screensavers/%{name}-%{version}.tgz
+# Source0-md5:	35c22fd9748f872fdb3ce8d861951704
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
