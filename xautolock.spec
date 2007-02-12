@@ -1,5 +1,5 @@
 Summary:	Utility to fire up programs in case of user inactivity under X
-Summary(pl.UTF-8):   Narzędzie do uruchamiania programów w przypadku nieaktywności użytkownika pod X
+Summary(pl.UTF-8):	Narzędzie do uruchamiania programów w przypadku nieaktywności użytkownika pod X
 Name:		xautolock
 Version:	2.1
 Release:	2
