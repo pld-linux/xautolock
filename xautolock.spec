@@ -1,5 +1,5 @@
 Summary:	Utility to fire up programs in case of user inactivity under X
-Summary(pl):	Narzêdzie do uruchamiania programów w przypadku nieaktywno¶ci u¿ytkownika pod X
+Summary(pl.UTF-8):   NarzÄ™dzie do uruchamiania programÃ³w w przypadku nieaktywnoÅ›ci uÅ¼ytkownika pod X
 Name:		xautolock
 Version:	2.1
 Release:	2
@@ -16,9 +16,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Utility to fire up programs in case of user inactivity under X.
 
-%description -l pl
-Narzêdzie do uruchamiania programów w przypadku nieaktywno¶ci
-u¿ytkownika pod X.
+%description -l pl.UTF-8
+NarzÄ™dzie do uruchamiania programÃ³w w przypadku nieaktywnoÅ›ci
+uÅ¼ytkownika pod X.
 
 %prep
 %setup -q
