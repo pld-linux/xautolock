@@ -7,7 +7,8 @@ License:	GPL v2
 Group:		X11/Applications
 Source0:	ftp://ftp.ibiblio.org/pub/Linux/X11/screensavers/%{name}-%{version}.tgz
 # Source0-md5:	9526347a202694ad235d731d9d3de91f
-BuildRequires:	xorg-xserver-server-devel
+BuildRequires:	xorg-lib-libXScrnSaver-devel
+BuildRequires:	xorg-util-imake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -22,15 +23,17 @@ użytkownika pod X.
 
 %build
 xmkmf
-%{__make} CDEBUGFLAGS="%{rpmcflags}"
+%{__make} \
+	CC="%{__cc}" \
+	CDEBUGFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_mandir}/man1
 
-%{__make} install install.man DESTDIR=$RPM_BUILD_ROOT
-
-%{__mv} $RPM_BUILD_ROOT/usr/man/man1/xautolock.1x $RPM_BUILD_ROOT%{_mandir}/man1/xautolock.1
+%{__make} install install.man \
+	DESTDIR=$RPM_BUILD_ROOT \
+	MANPATH=%{_mandir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -39,4 +42,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changelog Readme Todo
 %attr(755,root,root) %{_bindir}/xautolock
-%{_mandir}/man1/xautolock.1*
+%{_mandir}/man1/xautolock.1x*
